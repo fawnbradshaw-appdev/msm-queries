@@ -1,0 +1,20 @@
+<h1> List of all actors </h1>
+
+<table border="1">
+
+<% @list_of_actors.each do |each_actor| %>
+<tr>
+  <td> <%= each_actor.id %> </td>
+  <td> 
+    <img src="http://robohash.org/<%= each_actor.name %>">
+  </td>
+  <td> <%= each_actor.name %> </td>
+  <td> <%= each_actor.dob %> </td>
+  <td>
+    <a href="/actors/<%= each_actor.id %>">
+      Show details
+    </a>
+  </td>
+  
+</tr>
+<% end %>
