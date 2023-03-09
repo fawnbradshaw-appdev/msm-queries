@@ -11,8 +11,8 @@
   <td> <%= each_movie.title %> </td>
   <td> <%= each_movie.year %> </td>
   <td> 
-     
-      <%= each_movie.director_id %>
+     <% d= Director.where({ :id => each_movie.director_id}).at(0)%>
+     <%= d.name %>
 
   </td>
   <td>

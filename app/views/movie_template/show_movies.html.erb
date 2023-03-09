@@ -53,8 +53,8 @@
     Director
   </dt>
   <dd>
-      <% d= Director.where({ :id => @the_movie.director_id }) %>
-      <%= d.name %> 
+       <% d= Director.where({ :id => @the_movie.director_id}).at(0)%>
+     <%= d.name %>
   </dd>
 
   <dt>

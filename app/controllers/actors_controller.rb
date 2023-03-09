@@ -10,6 +10,7 @@ class ActorsController < ApplicationController
     the_id = params.fetch("an_id")
 
     @the_actor = Actor.where({ :id => the_id}).at(0)
+    @the_character = Character.where({ :actor_id => the_id})
 
     render({ :template => "actor_template/show_actors.html.erb"})
   end
